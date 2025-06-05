@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_videogames_cases" model="ir.actions.act_window">
+        <field name="name">Videogames Cases Nelson</field>
+        <field name="res_model">videogames.cases.nelson</field>
+        <field name="view_mode">tree,form,kanban</field>
+    <!--<field name="domain">[]</field>-->
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new game
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="videogames_menu" name="Videogames Management" sequence="10" />
+
+    <menuitem
+        id="videogames_cases_nelson_menu"
+        name="Cases"
+        action="action_videogames_cases"
+        parent="videogames_menu"
+        sequence="10"
+    />
+
+</odoo>
