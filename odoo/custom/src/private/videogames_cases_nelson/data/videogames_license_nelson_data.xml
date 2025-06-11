@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <!--CREATE DATA EXAMPLE FOR MODEL VIDEOGAMES.LICENSE.NELSON-->
+        <record id="videogames_license_data_1" model="videogames.license.nelson">
+            <field name="name">License 1</field>
+            <field name="start_date">2025-01-01</field>
+            <field name="partner_id" ref="base.user_root" />
+        </record>
+        <record id="videogames_license_data_2" model="videogames.license.nelson">
+            <field name="name">License 2</field>
+            <field name="start_date">2025-01-02</field>
+            <field name="partner_id" ref="base.user_root" />
+        </record>
+    </data>
+</odoo>

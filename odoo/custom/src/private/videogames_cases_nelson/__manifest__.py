@@ -15,7 +15,8 @@
     "data": [
         "security/groups.xml",
         "security/ir.model.access.csv",
-        "views/videogames_cases.xml",
+        "views/videogames_cases_actions.xml",
         "views/videogames_cases_views.xml",
+        "data/videogames_license_nelson_data.xml",
     ],
 }

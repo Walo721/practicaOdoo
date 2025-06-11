@@ -5,7 +5,7 @@
         <field name="name">videogames_cases_nelson.view.tree</field>
         <field name="model">videogames.cases.nelson</field>
         <field name="arch" type="xml">
-            <tree string="Cases">
+            <tree multi_edit="1" string="Cases">
                 <field name="sequence" widget="handle" />
                 <field name="name" />
                 <field name="release_date" optional="show" />
@@ -23,8 +23,27 @@
                 <header>
                     <field
                         name="status"
+                        options="{'clickable':1}"
                         widget="statusbar"
                         statusbar_visible="not_played,in_progress,completed"
+                    />
+                    <button
+                        string="Not played"
+                        name="action_not_played"
+                        type="object"
+                        class="btn-danger"
+                    />
+                    <button
+                        string="In progress"
+                        name="action_in_progress"
+                        type="object"
+                        class="btn-warning"
+                    />
+                    <button
+                        string="Completed"
+                        name="action_completed"
+                        type="object"
+                        class="btn-success"
                     />
                 </header>
                 <sheet>

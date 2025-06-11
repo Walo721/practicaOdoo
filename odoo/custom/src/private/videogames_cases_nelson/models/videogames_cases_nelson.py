@@ -23,3 +23,12 @@ class VideogamesCasesNelson(models.Model):
     user_id = fields.Many2one("res.users", string="User")
     sequence = fields.Integer("Sequence")
     notes = fields.Html("Notes")
+
+    def action_not_played(self):
+        self.status = "not_played"
+
+    def action_in_progress(self):
+        self.status = "in_progress"
+
+    def action_completed(self):
+        self.status = "completed"
