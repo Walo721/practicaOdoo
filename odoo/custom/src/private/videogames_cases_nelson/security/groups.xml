@@ -3,6 +3,7 @@
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
 
+<!-- MODULE -->
 <record id="ir_module_videogames_cases_nelson" model="ir.module.category">
     <field name="name">Videogames Cases Nelson</field>
 </record>
@@ -25,6 +26,8 @@
     </field>
     <field name="users" eval="[(4, ref('base.user_admin'))]" />
 </record>
+<!-- END GROUPS -->
+
 
 <!-- RULES -->
 
@@ -41,5 +44,5 @@
         <field name="domain_force">[(1,'=',1)]</field>
         <field name="groups" eval="[(4, ref('res_groups_videogames_manager'))]" />
     </record>
-
+<!-- END RULES -->
 </odoo>

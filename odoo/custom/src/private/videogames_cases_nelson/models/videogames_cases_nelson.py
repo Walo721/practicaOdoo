@@ -1,10 +1,12 @@
 from odoo import fields, models
 
 
+# Class to manage videogames #
 class VideogamesCasesNelson(models.Model):
     _name = "videogames.cases.nelson"
     _description = "Videogames cases"
 
+    # Fields #
     name = fields.Char(string="Name")
     description = fields.Text(string="Description")
     release_date = fields.Date(string="Release date")
@@ -24,6 +26,7 @@ class VideogamesCasesNelson(models.Model):
     sequence = fields.Integer("Sequence")
     notes = fields.Html("Notes")
 
+    # Functions to modify the status value #
     def action_not_played(self):
         self.status = "not_played"
 
