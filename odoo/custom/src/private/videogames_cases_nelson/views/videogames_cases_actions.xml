@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!-- CASES MENU CONTENT -->
     <record id="action_videogames_cases" model="ir.actions.act_window">
@@ -13,7 +13,7 @@
         </field>
     </record>
 
-    <!-- CASES MENU CONTENT -->
+    <!-- LICENSES MENU CONTENT -->
     <record id="action_videogames_license" model="ir.actions.act_window">
         <field name="name">Videogames Cases Nelson</field>
         <field name="res_model">videogames.license.nelson</field>
@@ -22,6 +22,19 @@
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create a new license
+            </p>
+        </field>
+    </record>
+
+    <!-- DEVELOPER MENU CONTENT -->
+    <record id="action_videogames_developer" model="ir.actions.act_window">
+        <field name="name">Videogames Developer Nelson</field>
+        <field name="res_model">videogames.developer.nelson</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new developer
             </p>
         </field>
     </record>
@@ -42,6 +55,15 @@
         id="videogames_license_nelson_menu"
         name="Licenses"
         action="action_videogames_license"
+        parent="videogames_menu"
+        sequence="10"
+    />
+
+    <!-- DEVELOPER MENU ITEM -->
+    <menuitem
+        id="videogames_developer_nelson_menu"
+        name="Developers"
+        action="action_videogames_developer"
         parent="videogames_menu"
         sequence="10"
     />
